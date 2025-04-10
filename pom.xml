@@ -26,6 +26,23 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.6.13</spring-boot.version>
+        <guava.version>31.1-jre</guava.version>
+        <mybaits-plus.version>3.5.2</mybaits-plus.version>
+        <aliyun-sdk-oss.version>3.17.2</aliyun-sdk-oss.version>
+        <qrcode-plugin.version>3.0.0</qrcode-plugin.version>
+        <commons-io.version>2.16.1</commons-io.version>
+        <hutool-all.version>5.8.15</hutool-all.version>
+        <itextpdf.version>5.5.13.3</itextpdf.version>
+        <kryo.version>5.4.0</kryo.version>
+        <commons-collections4.version>4.4</commons-collections4.version>
+        <commons-lang3.version>3.12.0</commons-lang3.version>
+        <ognl.version>3.2.11</ognl.version>
+        <knife4j.version>4.0.0</knife4j.version>
+        <mapstruct.version>1.4.2.Final</mapstruct.version>
+        <opencv.version>4.6.0-0</opencv.version>
+        <sensitive.version>0.8.0</sensitive.version>
+        <jwt.version>4.4.0</jwt.version>
+        <fastexcel.version>1.0.0</fastexcel.version>
     </properties>
 
     <dependencyManagement>
@@ -52,6 +69,118 @@
                 <groupId>com.github.devhub.forum</groupId>
                 <artifactId>devhub-core</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <!--  Java核心工具包   -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybaits-plus.version}</version>
+            </dependency>
+
+            <!--  文件上传：阿里云 OSS（对象存储服务）SDK  -->
+            <dependency>
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>${aliyun-sdk-oss.version}</version>
+            </dependency>
+
+            <!--   生成二维码    -->
+            <dependency>
+                <groupId>com.github.liuyueyi.media</groupId>
+                <artifactId>qrcode-plugin</artifactId>
+                <version>${qrcode-plugin.version}</version>
+            </dependency>
+
+            <!--   Apache 提供的 IO 工具类库，简化文件读写、流处理等操作。   -->
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+
+            <!--   一个非常流行的国产工具包，封装了日期、集合、IO、JSON、Excel、加密等功能，简洁实用。-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool-all.version}</version>
+            </dependency>
+
+            <!--  用于生成 PDF 文件  -->
+            <dependency>
+                <groupId>com.itextpdf</groupId>
+                <artifactId>itextpdf</artifactId>
+                <version>${itextpdf.version}</version>
+            </dependency>
+
+            <!--  Java 对象序列化 -->
+            <dependency>
+                <groupId>com.esotericsoftware</groupId>
+                <artifactId>kryo</artifactId>
+                <version>${kryo.version}</version>
+            </dependency>
+
+            <!--  Apache 的集合类扩展包，提供额外的集合类型和工具方法，比如 MultiMap、Bag、BidiMap 等。-->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${commons-collections4.version}</version>
+            </dependency>
+
+            <!--  Apache 提供的 Java 核心类库增强，如 StringUtils、ObjectUtils、RandomStringUtils 等，处理字符串、对象、反射等-->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+
+            <!--  表达式解析  -->
+            <dependency>
+                <groupId>ognl</groupId>
+                <artifactId>ognl</artifactId>
+                <version>${ognl.version}</version>
+            </dependency>
+
+            <!-- API 文档 -->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-openapi2-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+
+            <!-- 引入 MapStruct (Bean映射工具,将 DTO、VO、Entity 等类之间自动映射字段) -->
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+
+            <!--  注解处理器，用来在编译时生成实现代码。一般和 lombok 搭配用时，要额外配置注解处理器插件 -->
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>${mapstruct.version}</version>
+                <scope>compile</scope>
+            </dependency>
+
+            <!--  图像处理  -->
+            <dependency>
+                <groupId>org.openpnp</groupId>
+                <artifactId>opencv</artifactId>
+                <version>${opencv.version}</version>
+            </dependency>
+
+            <!--  Excel 文件导出  -->
+            <dependency>
+                <groupId>cn.idev.excel</groupId>
+                <artifactId>fastexcel</artifactId>
+                <version>${fastexcel.version}</version>
             </dependency>
 
         </dependencies>
